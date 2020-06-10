@@ -104,10 +104,22 @@
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem;
+  @media screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+    flex: 1;
+  }
+
   &__item {
     position: relative;
     &:not(::last-child) {
       margin-bottom: 0.5rem;
+      @media screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
   &__item::before {
@@ -139,6 +151,10 @@
     padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
+    @media screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
 
   &__icon {
@@ -156,6 +172,9 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+  @media screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 // Gallery
@@ -316,6 +335,7 @@
     margin-right: auto;
   }
   &__friends {
+    display: flex;
   }
   &__photo {
     box-sizing: content-box; // note this change.
@@ -324,7 +344,7 @@
     border-radius: 50%;
     border: 3px solid #fff;
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -337,6 +357,10 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -395,6 +419,9 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+  @media screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
   &__book-now {
     text-transform: uppercase;
     font-size: 2rem;
